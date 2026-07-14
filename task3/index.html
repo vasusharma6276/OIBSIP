@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="converter-card">
+        <h2>Temperature Converter</h2>
+        
+        <div class="input-group">
+            <label for="temperatureInput">Enter Temperature</label>
+            <input type="text" id="temperatureInput" placeholder="e.g., 32" autocomplete="off">
+            <div class="error-message" id="errorMessage">Please enter a valid numeric value.</div>
+        </div>
+
+        <div class="input-group">
+            <label for="unitSelect">Original Unit</label>
+            <select id="unitSelect">
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+            </select>
+        </div>
+
+        <button class="btn-convert" onclick="processConversion()">Convert</button>
+
+        <div class="result-box" id="resultBox">
+            <h4>Converted Outcomes:</h4>
+            <div class="result-values" id="resultValues"></div>
+        </div>
+    </div>
+
+    <script>
+        function processConversion() {
+            const inputVal = document.getElementById('temperatureInput').value.trim();
+            const currentUnit = document.getElementById('unitSelect').value;
+            const errorElement = document.getElementById('errorMessage');
+            const resultBox = document.getElementById('resultBox');
+            const resultValues = document.getElementById('resultValues');
+
+            // Explicit Numeric validation Check (rejects empty string, letters, and non-numeric characters)
+            if (inputVal === "" || isNaN(inputVal)) {
+                errorElement.style.display = 'block';
+                resultBox.style.display = 'none';
+                return;
+            }
+
+            // Hide error panel when input passes validation
+            errorElement.style.display = 'none';
+            const numericTemp = parseFloat(inputVal);
+
+            let celsius, fahrenheit, kelvin;
+
+            // Normalize values based on target unit configurations
+            switch(currentUnit) {
+                case 'C':
+                    celsius = numericTemp;
+                    fahrenheit = (numericTemp * 9/5) + 32;
+                    kelvin = numericTemp + 273.15;
+                    break;
+                case 'F':
+                    celsius = (numericTemp - 32) * 5/9;
+                    fahrenheit = numericTemp;
+                    kelvin = (numericTemp - 32) * 5/9 + 273.15;
+                    break;
+                case 'K':
+                    celsius = numericTemp - 273.15;
+                    fahrenheit = (numericTemp - 273.15) * 9/5 + 32;
+                    kelvin = numericTemp;
+                    break;
+            }
+
+            // Render calculations limited cleanly to 2 decimal places
+            let htmlOutput = '';
+            if (currentUnit !== 'C') htmlOutput += `<p>Celsius: <span>${celsius.toFixed(2)} °C</span></p>`;
+            if (currentUnit !== 'F') htmlOutput += `<p>Fahrenheit: <span>${fahrenheit.toFixed(2)} °F</span></p>`;
+            if (currentUnit !== 'K') htmlOutput += `<p>Kelvin: <span>${kelvin.toFixed(2)} K</span></p>`;
+
+            resultValues.innerHTML = htmlOutput;
+            resultBox.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

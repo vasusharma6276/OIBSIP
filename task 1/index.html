@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Vasu Sharma | SmartCode Lab - Landing Page</title>
+    <!-- Linking the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="glass-header">
+    <div class="nav-container">
+        <a href="#" class="logo">SmartCode<span> Lab</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Connect</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="badge">✨ Modern Web Development Internship</div>
+            <h1>Build & scale <span class="highlight">next-gen</span> web experiences</h1>
+            <p>Craft responsive, stunning websites that actually convert. Learn industry-grade HTML, CSS, and flex/grid techniques — hands-on project by <strong>Vasu Sharma</strong>.</p>
+            <div class="hero-cta-group">
+                <a href="#contact" class="btn-primary">Start Building →</a>
+                <a href="#features" class="btn-outline">Explore Modules</a>
+            </div>
+            <div class="mock-code-badge">✨ Level 1 Task: Landing Page</div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="developer workspace modern setup">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">⚡ Why <span class="accent-text">web craft</span> matters in 2025</h2>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Instant Trust & Authority</h3>
+                    <p>94% of first impressions relate to web design. Clean UI reflects professionalism and credibility — no second chances for broken layouts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile-First Mindset</h3>
+                    <p>Over 60% traffic from smartphones. Our responsive grids, flexible images & CSS media queries ensure flawless experience on any device.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>SEO & Core Web Vitals</h3>
+                    <p>Semantic HTML, optimized assets, clean navigation — modern SEO starts with solid code structure and fast loading experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Brand Consistency</h3>
+                    <p>Color palettes, typography, and spacing create recognisable identity. SmartCode Lab templates maintain visual harmony.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧩</div>
+                    <h3>Modular Components</h3>
+                    <p>Reusable sections, flexible columns, no overlapping elements — precise CSS grid and flexbox mastery.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Conversion-Driven Layouts</h3>
+                    <p>Strategic CTA placement and frictionless signup process increase conversion — form design and micro-interactions matter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 class="section-title">🔓 Unlock <span class="accent-text">Pro Toolkit</span></h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$0<span><small>/forever</small></span></div>
+                    <ul class="pricing-features">
+                        <li>5 responsive templates</li>
+                        <li>Basic support & docs</li>
+                        <li>Community access</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline btn-full">Start Free</a>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Pro Yearly</h3>
+                    <div class="price">$129<span><small>/year</small></span></div>
+                    <ul class="pricing-features">
+                        <li>All premium components</li>
+                        <li>Advanced CSS animations</li>
+                        <li>Priority 24/7 support</li>
+                        <li>Live project reviews</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Go Pro →</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>7-Day Trial</h3>
+                    <div class="price">$0<span><small>/trial</small></span></div>
+                    <ul class="pricing-features">
+                        <li>Full pro features</li>
+                        <li>AI code snippets</li>
+                        <li>Weekly mentor call</li>
+                        <li>Cancel anytime</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline">Claim trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">📬 Let's <span class="accent-text">collaborate</span></h2>
+            <div class="contact-wrapper">
+                <div class="contact-form-area">
+                    <form id="internshipForm" onsubmit="event.preventDefault(); alert('✨ Thanks Vasu! Your message has been received. We’ll get back soon.'); this.reset();">
+                        <div class="form-group">
+                            <label>Full name</label>
+                            <input type="text" placeholder="Vasu Sharma" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email address</label>
+                            <input type="email" placeholder="hello@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tell us about your project</label>
+                            <textarea rows="3" placeholder="I'm interested in modern landing page workshops..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">Send Inquiry →</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <h4>💡 Creator & Mentor</h4>
+                    <div class="contact-info-item">
+                        📧 <strong>Email:</strong> <a href="mailto:vasusharma6276@gmail.com">vasusharma6276@gmail.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        🔗 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vasu-sharma-074531393" target="_blank">linkedin.com/in/vasu-sharma-074531393</a>
+                    </div>
+                    <div class="contact-info-item">
+                        🧑‍💻 <strong>Portfolio:</strong> <a href="#">smartcode.dev/vasu</a>
+                    </div>
+                    <div class="contact-info-item">
+                        ⭐ Internship Project: AICTE OASIS INFOBY Level 1
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 SmartCode Lab. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
