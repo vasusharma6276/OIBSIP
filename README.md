@@ -12,4 +12,4 @@ This repository contains my solutions for the Oasis Infobyte Web Development Int
 
 * task 2: protfolio - { status completed } | : <a href="https://arihantjain2025-cloud.github.io/pinnacle-lab/"> view website</a>
 
-* task 3: temperature converter - { status completed } | :  <a href=""> view website </a>
+* task 3: temperature converter - { status completed } | :  <a href="https://arihantjain2025-cloud.github.io/task-3/"> view website </a>
